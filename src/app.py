@@ -19,7 +19,7 @@ chat_bot = TextBot()
 def chat_response():
     usr_msg = request.get_json().get('text')
     message = chat_bot.start_api(usr_msg)
-    print(f'message is {usr_msg}', type(message))
+    # print(f'message is {usr_msg}', type(message))
     return jsonify({'text': message, 'author': 'bot'})
 
 

@@ -1,7 +1,7 @@
 <template>
   <div class="chat-box">
-    <div class="chatbox-container">
-      <ul>
+    <div class="chatbox-container" ref="chatbox">
+      <ul class="chat-box-list">
         <li v-for="(msg, idx) in messages" :key="idx" :class="msg.author">
           <p>
             <span>{{ msg.text }}</span>
@@ -73,54 +73,80 @@ export default {
       // });
       this.message = "";
       this.loading = false;
+
+      this.$nextTick(() => {
+        this.$refs.chatbox.scrollTop = this.$refs.chatbox.scrollHeight;
+      });
     },
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.chat-box {
-  border: 1px solid black;
-  border-radius: 8px;
-  margin: 0 auto;
-  width: 60%;
-  padding: 5px;
-}
-
-ul {
-  padding: 0;
-}
-
+<style scoped lang="scss">
 .chat-box,
-.chat-box li {
+.chat-box-list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
 }
 
+.chatbox-container {
+  overflow: scroll;
+}
+
+.chat-box-list {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  span {
+    padding: 5px;
+    color: white;
+  }
+
+  .client {
+    // span {
+    //   background: rgb(3, 118, 194);
+    // }
+    p {
+      float: right;
+      background: rgb(3, 118, 194);
+      border-radius: 4px;
+      padding: 1px;
+    }
+  }
+
+  .bot {
+    // span {
+    //   background: lightcoral;
+    // }
+    p {
+      float: left;
+      background: lightcoral;
+      border-radius: 4px;
+      padding: 1px;
+    }
+  }
+}
+
+.chat-box {
+  margin: 10px;
+  border: 1px solid #999;
+  width: 50%;
+  height: 55vh;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
 .chatinput-container {
   display: flex;
-  margin: 0 auto;
-  width: 100%;
-}
+  // width: 100%;
 
-.btn {
-  width: 135px;
-}
-
-.client span {
-  background: rgb(3, 118, 194);
-  border-radius: 4px;
-  padding: 8px;
-  float: left;
-  color: white;
-}
-
-.bot span {
-  background: lightcoral;
-  border-radius: 4px;
-  padding: 8px;
-  float: right;
+  button {
+    width: 145px;
+  }
 }
 </style>
