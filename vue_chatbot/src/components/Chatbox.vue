@@ -93,6 +93,7 @@ export default {
 
 .chatbox-container {
   overflow: scroll;
+  height: 55vh;
 }
 
 .chat-box-list {
@@ -106,9 +107,6 @@ export default {
   }
 
   .client {
-    // span {
-    //   background: rgb(3, 118, 194);
-    // }
     p {
       float: right;
       background: rgb(3, 118, 194);
@@ -118,9 +116,6 @@ export default {
   }
 
   .bot {
-    // span {
-    //   background: lightcoral;
-    // }
     p {
       float: left;
       background: lightcoral;
@@ -143,7 +138,6 @@ export default {
 
 .chatinput-container {
   display: flex;
-  // width: 100%;
 
   button {
     width: 145px;

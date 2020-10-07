@@ -1,10 +1,9 @@
-[![MIT License][mit-license-shield]][mit-license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 # Simple Chatbot
 > A simple chatbot application built using chatterbot, flask and vue js.
 
-
+![](assets/vue_chatbot_demo.gif)
 
 ## Table of Contents
   - [Introduction](#introduction)
@@ -33,44 +32,38 @@ $ git clone https://github.com/NurmanZahin/flask_vue_chatbot.git
 ```
 
 ### Installing dependencies
-- Create a new conda environment 
-- Install dependencies using the requirements.txt using [pip](https://pip.pypa.io/en/stable/installing/)
+- Create a new conda environment using the environment.yml
+- Install the frontend packages required
 ```shell
 $ conda env create -f environment.yml
-$ conda activate smile-detector 
+$ conda activate ai_chatbot
+$ cd vue_chatbot
+$ npm install
 ```
 
 ## Usage
+- To try out the demo application for chatting via text, run the command below
+- The demo app can be accessed using [http://localhost:8080](http://localhost:8080)
 
+**Note: It may take some time to train the chatterbot.**
 ```shell
-$ python -m src.app
+$ bash start_chatbot.sh
+```
+<br>
+
+- To try out the demo application for chatting via speech, run the command below from the ai_assistant directory
+```shell
+$ python -m src.model
 ```
 
 
-
-## Acknowledgements
-### Articles 
-- 
-
-### Codes that were used
-- 
-
-### Dataset
-- Olivetti Faces Dataset (AT&T Laboratories Cambridge)
-
-
-## License
-
-[![MIT License][mit-license-shield]][mit-license-url]
-
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+## Acknowledgements 
+- [chatterbot](https://chatterbot.readthedocs.io/en/stable/)
+- [chatbot frontend](https://github.com/syntacticsolutions/vue-chatbox-tutorial)
+- [Virtual Assistant](https://www.activestate.com/blog/how-to-build-a-digital-virtual-assistant-in-python/)
 
 
 
-[mit-license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[mit-license-url]: https://badges.mit-license.org/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/nurman-jupri-20655814a
 [product-screenshot]: images/screenshot.png
-[article1-url]: https://towardsdatascience.com/beginners-guide-to-building-a-singlish-ai-chatbot-7ecff8255ee
-[article2-url]: https://towardsdatascience.com/generating-singlish-text-messages-with-a-lstm-network-7d0fdc4593b6

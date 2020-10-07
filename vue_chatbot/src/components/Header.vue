@@ -12,10 +12,14 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="https://www.linkedin.com/in/nurman-jupri-20655814a/"
+          <b-nav-item
+            target="_blank"
+            href="https://www.linkedin.com/in/nurman-jupri-20655814a/"
             >LinkedIn</b-nav-item
           >
-          <b-nav-item href="https://github.com/NurmanZahin">Github</b-nav-item>
+          <b-nav-item target="_blank" href="https://github.com/NurmanZahin"
+            >Github</b-nav-item
+          >
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

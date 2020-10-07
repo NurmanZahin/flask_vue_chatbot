@@ -1,4 +1,4 @@
-name: ai_assistant
+name: ai_chatbot
 channels: 
     - defaults
     - conda-forge
@@ -7,11 +7,13 @@ dependencies:
     - pip=20.1.1
     - PyAudio
     - pip:
+        - Flask
+        - Flask-Cors
         - pyttsx3
         - SpeechRecognition
         - chatterbot
         - chatterbot_corpus
         - wikipedia
         - spacy
-        - Flask-Cors
+
         

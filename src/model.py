@@ -32,14 +32,11 @@ def train_bot():
     return my_bot
 
 
-chat_bot = train_bot()
-
-
 class SpeechBot:
-    def __init__(self, speech_engine=speech_engine, chat_bot=chat_bot):
+    def __init__(self, speech_engine=speech_engine):
         self.speech = speech_engine
         self.recognizer = sr
-        self.chat_bot = chat_bot
+        self.chat_bot = train_bot()
 
     def speak(self, text):
         """Function to output speech from text"""
@@ -105,8 +102,8 @@ class SpeechBot:
 
 
 class TextBot:
-    def __init__(self, chat_bot=chat_bot):
-        self.chat_bot = chat_bot
+    def __init__(self):
+        self.chat_bot = train_bot()
 
     @staticmethod
     def text_respond(text):
