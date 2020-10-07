@@ -48,29 +48,6 @@ export default {
         this.messages.push({ text: res.data.text, author: "bot" });
       });
 
-      // axios({
-      //   method: "GET",
-      //   url: "https://acobot-brainshop-ai-v1.p.rapidapi.com/get",
-      //   headers: {
-      //     "content-type": "application/octet-stream",
-      //     "x-rapidapi-host": "acobot-brainshop-ai-v1.p.rapidapi.com",
-      //     "x-rapidapi-key":
-      //       "2afc6d3e79mshae2be1d4810a177p196257jsnf07a6a459141",
-      //     useQueryString: true,
-      //   },
-      //   params: {
-      //     bid: "178",
-      //     key: "sX5A2PcYZbsN5EY6",
-      //     uid: "mashape",
-      //     msg: this.message,
-      //   },
-      // })
-      //   .then((res) => {
-      //     this.messages.push({ text: res.data.cnt, author: "bot" });
-      //   })
-      //   .catch((error) => {
-      //     console.log(error);
-      // });
       this.message = "";
       this.loading = false;
 
