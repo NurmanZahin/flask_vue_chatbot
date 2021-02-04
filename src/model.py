@@ -175,5 +175,5 @@ class TextBot:
 
 
 if __name__ == '__main__':
-    speech_bot = TextBot()
+    speech_bot = SpeechBot()
     speech_bot.start()
